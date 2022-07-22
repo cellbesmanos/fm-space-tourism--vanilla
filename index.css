@@ -1,4 +1,9 @@
 /* general reset */
+:root {
+  --clr-white: 0 0% 100;
+  --clr-black: 230 35% 7%;
+  --clr-primary: 231 77% 80%;
+}
 
 *,
 *::before,
@@ -75,4 +80,30 @@ select {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* colors */
+
+.bg-black {
+  background-color: hsl(var(--clr-black));
+}
+
+.bg-white {
+  background-color: hsl(var(--clr-white));
+}
+
+.bg-primary {
+  background-color: hsl(var(--clr-primary));
+}
+
+.text-black {
+  color: hsl(var(--clr-black));
+}
+
+.text-white {
+  color: hsl(var(--clr-white));
+}
+
+.text-primary {
+  color: hsl(var(--clr-primary));
 }
