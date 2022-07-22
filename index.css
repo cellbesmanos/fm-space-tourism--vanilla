@@ -3,6 +3,19 @@
   --clr-white: 0 0% 100;
   --clr-black: 230 35% 7%;
   --clr-primary: 231 77% 80%;
+
+  --fm-serif: "Bellefair", serif;
+  --fm-sans: "Barlow", sans-serif;
+  --fm-sans-condensed: "Barlow Condensed", sans-serif;
+
+  --fs-200: 1.4rem;
+  --fs-300: 1.6rem;
+  --fs-400: 1.8rem;
+  --fs-500: 2.8rem;
+  --fs-600: 3.2rem;
+  --fs-700: 5.6rem;
+  --fs-800: 10rem;
+  --fs-900: 15rem;
 }
 
 *,
@@ -20,8 +33,12 @@ html {
 body {
   min-height: 100vh;
 
-  font-size: 1.8rem;
+  font-family: var(--fm-sans);
+  font-size: var(--fs-400);
   line-height: 1.5;
+
+  color: hsl(var(--clr-primary));
+  background-color: hsl(var(--clr-black));
 
   box-sizing: border-box;
 }
@@ -37,6 +54,16 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
 }
 
 /* remove animations when turned off */
@@ -106,4 +133,62 @@ select {
 
 .text-primary {
   color: hsl(var(--clr-primary));
+}
+
+/* typography */
+
+/* .ff-serif {
+  font-family: var(--ff-serif);
+}
+.ff-sans-cond {
+  font-family: var(--ff-sans-cond);
+}
+.ff-sans-normal {
+  font-family: var(--ff-sans-normal);
+} */
+
+.letter-spacing-1 {
+  letter-spacing: 4.75px;
+}
+.letter-spacing-2 {
+  letter-spacing: 2.7px;
+}
+.letter-spacing-3 {
+  letter-spacing: 2.35px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.fs-900 {
+  font-size: var(--fs-900);
+}
+.fs-800 {
+  font-size: var(--fs-800);
+}
+.fs-700 {
+  font-size: var(--fs-700);
+}
+.fs-600 {
+  font-size: var(--fs-600);
+}
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-300 {
+  font-size: var(--fs-300);
+}
+.fs-200 {
+  font-size: var(--fs-200);
+}
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+  line-height: 1.1;
 }
