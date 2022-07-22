@@ -1,6 +1,6 @@
 /* general reset */
 :root {
-  --clr-white: 0 0% 100;
+  --clr-white: 0 0% 100%;
   --clr-black: 230 35% 7%;
   --clr-primary: 231 77% 80%;
 
@@ -191,4 +191,18 @@ p {
 .fs-700,
 .fs-600 {
   line-height: 1.1;
+}
+
+.numbered-title {
+  color: hsl(var(--clr-white));
+  font-family: var(--fm-sans-condensed);
+  font-size: var(--fs-500);
+  letter-spacing: 4.72px;
+  text-transform: uppercase;
+}
+
+.numbered-title > span {
+  color: hsla(var(--clr-white) / 0.25);
+  font-weight: 700;
+  margin-inline-end: 1.6rem;
 }
