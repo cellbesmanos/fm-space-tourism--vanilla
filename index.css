@@ -141,15 +141,15 @@ p {
 
 /* typography */
 
-/* .ff-serif {
-  font-family: var(--ff-serif);
+.fm-serif {
+  font-family: var(--fm-serif);
 }
-.ff-sans-cond {
-  font-family: var(--ff-sans-cond);
+.fm-sans {
+  font-family: var(--fm-sans);
 }
-.ff-sans-normal {
-  font-family: var(--ff-sans-normal);
-} */
+.fm-sans-condensed {
+  font-family: var(--fm-sans-condensed);
+}
 
 .letter-spacing-1 {
   letter-spacing: 4.75px;
@@ -209,4 +209,49 @@ p {
   color: hsla(var(--clr-white) / 0.25);
   font-weight: 700;
   margin-inline-end: 1.6rem;
+}
+
+/* components */
+
+.large-button {
+  --size: 27.4rem;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size);
+  height: var(--size);
+
+  text-decoration: none;
+
+  border-radius: 50%;
+
+  aspect-ratio: 1 / 1;
+  z-index: 1;
+}
+
+.large-button::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  background-color: hsla(var(--clr-white) / 0.25);
+  border-radius: 50%;
+
+  opacity: 0;
+  content: "";
+  z-index: -1;
+  transition: opacity 250ms linear, transform 500ms ease-in-out;
+}
+
+.large-button:hover::after,
+.large-button:focus::after {
+  opacity: 1;
+  transform: scale(1.6);
 }
