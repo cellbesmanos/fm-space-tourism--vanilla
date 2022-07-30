@@ -109,6 +109,10 @@ p {
   border: 0;
 }
 
+.flow > *:where(:not(:first-child)) {
+  margin-block-start: var(--flow-space, 1.6rem);
+}
+
 /* colors */
 
 .bg-black {
