@@ -255,3 +255,45 @@ p {
   opacity: 1;
   transform: scale(1.6);
 }
+
+.primary-navigation {
+  list-style: none;
+}
+
+.primary-navigation a {
+  text-decoration: none;
+}
+
+.primary-navigation a > span {
+  font-weight: 700;
+  margin-right: 0.8rem;
+}
+
+.underline-indicators li > a {
+  position: relative;
+  padding-block: var(--underline-gap, 1.6rem);
+}
+
+.underline-indicators li > a::after {
+  position: absolute;
+  bottom: 0;
+
+  display: block;
+  width: 100%;
+  height: 0.3rem;
+
+  background-color: hsla(var(--clr-white) / 0.25);
+
+  opacity: 0;
+  content: "";
+}
+
+.underline-indicators li > a:hover:after,
+.underline-indicators li > a:focus:after {
+  opacity: 1;
+}
+
+.underline-indicators li.active > a::after {
+  opacity: 1;
+  background-color: hsl(var(--clr-white));
+}
