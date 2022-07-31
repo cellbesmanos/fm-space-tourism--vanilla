@@ -336,3 +336,29 @@ p {
 .dot-indicators > button[aria-selected="true"] {
   background-color: hsl(var(--clr-white));
 }
+
+.numbered-indicators > button {
+  --size: 8rem;
+
+  width: var(--size);
+  height: var(--size);
+
+  color: hsl(var(--clr-white));
+  background-color: hsl(var(--clr-black));
+  border-radius: 50%;
+  border: 1px solid hsla(var(--clr-white) / 0.25);
+
+  aspect-ratio: 1;
+  cursor: pointer;
+}
+
+.numbered-indicators > button:hover,
+.numbered-indicators > button:focus {
+  border-color: hsl(var(--clr-white));
+}
+
+.numbered-indicators > button[aria-selected="true"] {
+  color: hsl(var(--clr-black));
+  border-color: hsl(var(--clr-white));
+  background-color: hsl(var(--clr-white));
+}
