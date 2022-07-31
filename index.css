@@ -8,14 +8,33 @@
   --fm-sans: "Barlow", sans-serif;
   --fm-sans-condensed: "Barlow Condensed", sans-serif;
 
-  --fs-200: 1.4rem;
-  --fs-300: 1.6rem;
-  --fs-400: 1.8rem;
+  --fs-900: clamp(8rem, 8vw + 1.6rem, 15rem);
+  --fs-800: 5.6rem;
+  --fs-700: 2.4rem;
+  --fs-600: 1.6rem;
   --fs-500: 2.8rem;
-  --fs-600: 3.2rem;
-  --fs-700: 5.6rem;
-  --fs-800: 10rem;
-  --fs-900: 15rem;
+  --fs-400: 1.5rem;
+  --fs-300: 1.4rem;
+  --fs-200: 1.4rem;
+}
+
+@media (min-width: 35em) {
+  :root {
+    --fs-800: 8rem;
+    --fs-700: 4rem;
+    --fs-600: 2.4rem;
+    --fs-400: 1.6rem;
+    --fs-300: 1.6rem;
+  }
+}
+
+@media (min-width: 45em) {
+  :root {
+    --fs-800: 10rem;
+    --fs-700: 5.6rem;
+    --fs-600: 3.2rem;
+    --fs-400: 1.8rem;
+  }
 }
 
 *,
@@ -32,6 +51,9 @@ html {
 
 body {
   min-height: 100vh;
+
+  display: grid;
+  grid-template-rows: min-content 1fr;
 
   font-family: var(--fm-sans);
   font-size: var(--fs-400);
@@ -92,9 +114,48 @@ p {
 }
 
 .container {
-  max-width: 80rem;
+  max-width: 128rem;
   margin-inline: auto;
   padding-inline: 2em;
+}
+
+.grid-container {
+  display: grid;
+  place-items: center;
+  padding-inline: 1.6rem;
+
+  text-align: center;
+}
+
+.grid-container > * {
+  max-width: 45ch;
+}
+
+@media (min-width: 45em) {
+  .grid-container {
+    display: grid;
+    column-gap: var(--container-gap, 3.2rem);
+    grid-template-columns: minmax(1.6rem, 1fr) repeat(2, minmax(0, 64rem)) minmax(
+        1.6rem,
+        1fr
+      );
+    padding-inline: unset;
+
+    text-align: left;
+  }
+
+  .grid-container > *:first-child {
+    grid-column: 2 / 3;
+  }
+
+  .grid-container > *:last-child {
+    grid-column: 3 / 4;
+  }
+
+  .grid-container--home {
+    padding-bottom: max(9.6rem, 20vh);
+    align-items: end;
+  }
 }
 
 .sr-only {
@@ -214,7 +275,7 @@ p {
 /* components */
 
 .large-button {
-  --size: 27.4rem;
+  --size: 15rem;
 
   position: relative;
 
@@ -224,12 +285,26 @@ p {
   width: var(--size);
   height: var(--size);
 
+  font-size: 2rem;
   text-decoration: none;
 
   border-radius: 50%;
 
   aspect-ratio: 1 / 1;
   z-index: 1;
+}
+
+@media (min-width: 35em) {
+  .large-button {
+    --size: 24.2rem;
+    font-size: 3.2rem;
+  }
+}
+
+@media (min-width: 45em) {
+  .large-button {
+    --size: 27.4rem;
+  }
 }
 
 .large-button::after {
