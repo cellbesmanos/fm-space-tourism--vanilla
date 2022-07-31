@@ -313,3 +313,26 @@ p {
 .tab-list button[aria-selected="true"] {
   color: hsl(var(--clr-white));
 }
+
+.dot-indicators > button {
+  --size: 1.5rem;
+
+  width: var(--size);
+  height: var(--size);
+
+  border: unset;
+  border-radius: 50%;
+  background-color: hsla(var(--clr-white) / 0.25);
+
+  cursor: pointer;
+  aspect-ratio: 1;
+}
+
+.dot-indicators > button:hover,
+.dot-indicators > button:focus {
+  background-color: hsla(var(--clr-white) / 0.5);
+}
+
+.dot-indicators > button[aria-selected="true"] {
+  background-color: hsl(var(--clr-white));
+}
