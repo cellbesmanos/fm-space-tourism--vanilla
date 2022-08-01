@@ -29,10 +29,18 @@
         <img src="./assets/shared/logo.svg" alt="space tourism logo" />
       </div>
 
-      <!-- <nav>
+      <button
+        class="mobile-nav-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav>
         <ul
+          id="primary-navigation"
           class="primary-navigation underline-indicators fm-sans-condensed flex"
-          style="--underline-gap: 3.2rem"
         >
           <li class="active">
             <a class="uppercase text-white letter-spacing-2" href="#"
@@ -55,7 +63,7 @@
             >
           </li>
         </ul>
-      </nav> -->
+      </nav>
     </header>
 
     <main class="grid-container grid-container--home">
