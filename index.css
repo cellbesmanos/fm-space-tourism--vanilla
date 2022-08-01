@@ -65,6 +65,7 @@ body {
   background-size: cover;
 
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 img,
@@ -348,6 +349,10 @@ p {
 }
 
 .mobile-nav-toggle {
+  display: none;
+
+  background-color: unset;
+  border: unset;
   cursor: pointer;
 }
 
@@ -355,6 +360,8 @@ p {
   --underline-gap: 3.2rem;
   padding: 0;
   background-color: hsla(var(--clr-black) / 0.98);
+
+  list-style: none;
 }
 
 @supports (backdrop-filter: blur(4rem)) {
@@ -366,23 +373,51 @@ p {
 
 @media (max-width: 35em) {
   .primary-navigation {
-    position: fixed;
-    flex-direction: column;
-    padding-block: min(32rem, 10vh);
-    padding-inline: 3.2rem 2.6rem;
-
-    list-style: none;
-    inset: 0 0 0 20%;
-    z-index: 9999;
-  }
-
-  .primary-navigation {
     --gap: 2rem;
     --underline-gap: 1.2rem;
+
+    position: fixed;
+    flex-direction: column;
+    padding-block: min(32rem, 15vh);
+    padding-inline: 3.2rem 2.6rem;
+
+    transform: translateX(100%);
+
+    inset: 0 0 0 20%;
+    z-index: 1000;
+  }
+
+  .primary-navigation--active {
+    animation: slide 500ms ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes slide {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
   }
 
   .primary-navigation.underline-indicators .active > *::after {
     display: none;
+  }
+
+  .mobile-nav-toggle {
+    position: absolute;
+    display: block;
+    top: 3.2rem;
+    right: 2.6rem;
+    width: 2.4rem;
+
+    background-image: url("./assets/shared/icon-hamburger.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: 2000;
+    aspect-ratio: 1 / 1;
   }
 }
 
