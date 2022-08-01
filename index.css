@@ -187,6 +187,24 @@ p {
   border: 0;
 }
 
+.skip-to-content {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  padding: 1.2rem 1.8rem;
+
+  color: hsl(var(--clr-black));
+  background-color: hsl(var(--clr-white));
+
+  z-index: 9999;
+  transition: transform 0.2s ease-in;
+}
+
+.skip-to-content:focus {
+  transform: translate(-50%, 0);
+}
+
 .flow > *:where(:not(:first-child)) {
   margin-block-start: var(--flow-space, 1.6rem);
 }
