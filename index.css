@@ -61,6 +61,8 @@ body {
 
   color: hsl(var(--clr-primary));
   background-color: hsl(var(--clr-black));
+  background-repeat: no-repeat;
+  background-size: cover;
 
   box-sizing: border-box;
 }
@@ -131,6 +133,16 @@ p {
   max-width: 45ch;
 }
 
+.grid-container--home h1 {
+  font-size: 1.6rem;
+}
+
+@media (min-width: 45em) {
+  .grid-container--home h1 {
+    font-size: 2rem;
+  }
+}
+
 @media (min-width: 45em) {
   .grid-container {
     display: grid;
@@ -155,6 +167,10 @@ p {
   .grid-container--home {
     padding-bottom: max(9.6rem, 20vh);
     align-items: end;
+  }
+
+  .grid-container--home h1 {
+    font-size: 2.8rem;
   }
 }
 
@@ -436,4 +452,24 @@ p {
   color: hsl(var(--clr-black));
   border-color: hsl(var(--clr-white));
   background-color: hsl(var(--clr-white));
+}
+
+/* Page specfic backgrounds */
+
+.home {
+  background-image: url("./assets/home/background-home-mobile.jpg");
+  background-position: bottom center;
+}
+
+@media (min-width: 35em) {
+  .home {
+    background-image: url("./assets/home/background-home-tablet.jpg");
+  }
+}
+
+@media (min-width: 45em) {
+  .home {
+    background-image: url("./assets/home/background-home-desktop.jpg");
+    background-position: center;
+  }
 }
