@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Space Tourism</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="../index.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="../scripts.js" defer></script>
+  </head>
+
+  <body class="destination">
+    <a href="#main" class="skip-to-content">Skip to main content</a>
+
+    <header class="primary-header flex">
+      <div>
+        <img
+          class="logo"
+          src="../assets/shared/logo.svg"
+          alt="space tourism logo"
+        />
+      </div>
+
+      <button
+        class="mobile-nav-toggle"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav>
+        <ul
+          id="primary-navigation"
+          class="primary-navigation underline-indicators fm-sans-condensed flex"
+        >
+          <li>
+            <a class="uppercase text-white letter-spacing-2" href="./index.html"
+              ><span aria-hidden="true">00</span>Home</a
+            >
+          </li>
+          <li class="active">
+            <a class="uppercase text-white letter-spacing-2" href="#"
+              ><span aria-hidden="true">01</span>Destination</a
+            >
+          </li>
+          <li>
+            <a class="uppercase text-white letter-spacing-2" href="#"
+              ><span aria-hidden="true">02</span>Crew</a
+            >
+          </li>
+          <li>
+            <a class="uppercase text-white letter-spacing-2" href="#"
+              ><span aria-hidden="true">03</span>Technology</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main" class="grid-container grid-container--destination flow">
+      <h1 class="numbered-title">
+        <span aria-hidden="true">01</span>Pick your destination
+      </h1>
+
+      <picture class="planet-image">
+        <source src="../assets/destination/image-moon.webp" type="image/webp" />
+        <img src="../assets/destination/image-moon.png" alt="the moon" />
+      </picture>
+
+      <ul
+        class="tab-list underline-indicators flex"
+        style="--underline-gap: 1.2rem"
+      >
+        <li class="active">
+          <button
+            class="uppercase fm-sans-condensed fs-300 text-primary letter-spacing-2"
+            href="#"
+            role="tab"
+            aria-selected="true"
+          >
+            Moon
+          </button>
+        </li>
+        <li>
+          <button
+            class="uppercase fm-sans-condensed fs-300 text-primary letter-spacing-2"
+            href="#"
+            role="tab"
+            aria-selected="false"
+          >
+            Mars
+          </button>
+        </li>
+        <li>
+          <button
+            class="uppercase fm-sans-condensed fs-300 text-primary letter-spacing-2"
+            href="#"
+            role="tab"
+            aria-selected="false"
+          >
+            Europa
+          </button>
+        </li>
+        <li>
+          <button
+            class="uppercase fm-sans-condensed fs-300 text-primary letter-spacing-2"
+            href="#"
+            role="tab"
+            aria-selected="false"
+          >
+            Titan
+          </button>
+        </li>
+      </ul>
+
+      <article class="planet-info flow">
+        <section class="planet-info__text">
+          <h2 class="uppercase fs-800 text-white fm-serif">Moon</h2>
+
+          <p>
+            See our planet as you’ve never seen it before. A perfect relaxing
+            trip away to help regain perspective and come back refreshed. While
+            you’re there, take in some history by visiting the Luna 2 and Apollo
+            11 landing sites.
+          </p>
+        </section>
+
+        <section class="planet-info__stats flex">
+          <div class="uppercase">
+            <h3 class="fs-200 letter-spacing-3 fm-sans-condensed">
+              Avg. distance
+            </h3>
+            <p class="text-white fm-serif fs-500">384,400 km</p>
+          </div>
+          <div class="uppercase">
+            <h3 class="fs-200 letter-spacing-3 fm-sans-condensed">
+              Est. travel time
+            </h3>
+            <p class="text-white fm-serif fs-500">3 days</p>
+          </div>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
