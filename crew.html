@@ -25,7 +25,7 @@
     <script src="../scripts.js" defer></script>
   </head>
 
-  <body class="destination">
+  <body class="crew">
     <a href="#main" class="skip-to-content">Skip to main content</a>
 
     <header class="primary-header flex">
@@ -76,89 +76,49 @@
       </nav>
     </header>
 
-    <main id="main" class="grid-container grid-container--destination flow">
+    <main id="main" class="grid-container grid-container--crew flow">
       <h1 class="numbered-title">
-        <span aria-hidden="true">01</span>Pick your destination
+        <span aria-hidden="true">02</span>Meet your crew
       </h1>
 
-      <picture class="planet-image">
-        <source src="../assets/destination/image-moon.webp" type="image/webp" />
-        <img src="../assets/destination/image-moon.png" alt="the moon" />
+      <picture class="crew-image">
+        <source
+          src="../assets/crew/image-douglas-hurley.webp"
+          type="image/webp"
+        />
+        <img
+          src="../assets/crew/image-douglas-hurley.png"
+          alt="douglas hurley"
+        />
       </picture>
 
-      <ul
-        class="tab-list underline-indicators flex"
-        style="--underline-gap: 1.2rem"
-      >
-        <li class="active">
-          <button
-            class="uppercase fm-sans-condensed fs-300 text-primary letter-spacing-2"
-            href="#"
-            role="tab"
-            aria-selected="true"
-          >
-            Moon
-          </button>
-        </li>
-        <li>
-          <button
-            class="uppercase fm-sans-condensed fs-300 text-primary letter-spacing-2"
-            href="#"
-            role="tab"
-            aria-selected="false"
-          >
-            Mars
-          </button>
-        </li>
-        <li>
-          <button
-            class="uppercase fm-sans-condensed fs-300 text-primary letter-spacing-2"
-            href="#"
-            role="tab"
-            aria-selected="false"
-          >
-            Europa
-          </button>
-        </li>
-        <li>
-          <button
-            class="uppercase fm-sans-condensed fs-300 text-primary letter-spacing-2"
-            href="#"
-            role="tab"
-            aria-selected="false"
-          >
-            Titan
-          </button>
-        </li>
-      </ul>
+      <article class="crew-info flow">
+        <header class="flow">
+          <h2 class="uppercase fs-600 fm-serif">Commander</h2>
+          <p class="uppercase fs-700 text-white fm-serif">Douglas Hurley</p>
+        </header>
 
-      <article class="planet-info flow">
-        <section class="planet-info__text">
-          <h2 class="uppercase fs-800 text-white fm-serif">Moon</h2>
-
-          <p>
-            See our planet as you’ve never seen it before. A perfect relaxing
-            trip away to help regain perspective and come back refreshed. While
-            you’re there, take in some history by visiting the Luna 2 and Apollo
-            11 landing sites.
-          </p>
-        </section>
-
-        <section class="planet-info__stats flex">
-          <div class="uppercase">
-            <h3 class="fs-200 letter-spacing-3 fm-sans-condensed">
-              Avg. distance
-            </h3>
-            <p class="text-white fm-serif fs-500">384,400 km</p>
-          </div>
-          <div class="uppercase">
-            <h3 class="fs-200 letter-spacing-3 fm-sans-condensed">
-              Est. travel time
-            </h3>
-            <p class="text-white fm-serif fs-500">3 days</p>
-          </div>
-        </section>
+        <p>
+          Douglas Gerald Hurley is an American engineer, former Marine Corps
+          pilot and former NASA astronaut. He launched into space for the third
+          time as commander of Crew Dragon Demo-2.
+        </p>
       </article>
+
+      <div class="dot-indicators flex">
+        <button aria-selected="true">
+          <span class="sr-only">Slide title here</span>
+        </button>
+        <button aria-selected="false">
+          <span class="sr-only">Slide title here</span>
+        </button>
+        <button aria-selected="false">
+          <span class="sr-only">Slide title here</span>
+        </button>
+        <button aria-selected="false">
+          <span class="sr-only">Slide title here</span>
+        </button>
+      </div>
     </main>
   </body>
 </html>
