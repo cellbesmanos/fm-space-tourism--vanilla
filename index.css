@@ -28,7 +28,7 @@
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 53.75em) {
   :root {
     --fs-800: 10rem;
     --fs-700: 5.6rem;
@@ -287,7 +287,7 @@ p {
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 53.75em) {
   .large-button {
     --size: 27.4rem;
   }
@@ -418,13 +418,13 @@ p {
   }
 }
 
-@media (min-width: 35em) and (max-width: 45em) {
+@media (min-width: 35em) and (max-width: 53.75em) {
   .primary-navigation a > span {
     display: none;
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 53.75em) {
   .primary-header::after {
     position: relative;
 
@@ -575,7 +575,7 @@ p {
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 53.75em) {
   .home {
     background-image: url("./assets/home/background-home-desktop.jpg");
     background-position: center;
@@ -739,14 +739,14 @@ p {
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 53.75em) {
   .planet-info__stats {
     --gap: min(5vw, 8rem);
     justify-content: flex-start;
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 53.75em) {
   .grid-container {
     display: grid;
     column-gap: var(--container-gap, 3.2rem);
