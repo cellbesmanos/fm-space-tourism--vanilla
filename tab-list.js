@@ -66,15 +66,44 @@ function selectTab(e) {
     tab.setAttribute("aria-selected", "false");
   });
 
-  console.log(tabIndex);
-
   const activeTab = tabList.querySelector(
     `li button[role='tab'][data-tab-index='${tabIndex}']`
   );
   const activeItem = activeTab.parentElement;
-  const activePanel = activeTab.getAttribute("aria-controls");
 
   activeTab.setAttribute("aria-selected", "true");
   activeItem.classList.add("active");
-  console.log(activePanel);
+
+  changeActivePanel(activeTab);
+}
+
+function changeActivePanel(activeTab) {
+  const nextActivePanel = activeTab.getAttribute("aria-controls");
+  const mainContainer = document.querySelector(
+    "main.grid-container--destination"
+  );
+  const activePanel = mainContainer.querySelector(`article#${nextActivePanel}`);
+
+  const panels = mainContainer.querySelectorAll("article[role='tabpanel']");
+
+  panels.forEach((panel) => {
+    panel.classList.add("hidden");
+  });
+
+  activePanel.classList.remove("hidden");
+
+  changeActivePicture(nextActivePanel);
+}
+
+function changeActivePicture(nextActivePanel) {
+  const planetPictures = document.querySelectorAll("picture.planet-image");
+  const activePicture = document.querySelector(
+    `picture.planet-image[data-image-for='${nextActivePanel}']`
+  );
+
+  planetPictures.forEach((picture) => {
+    picture.classList.add("hidden");
+  });
+
+  activePicture.classList.remove("hidden");
 }
