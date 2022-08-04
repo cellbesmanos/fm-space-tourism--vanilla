@@ -82,7 +82,7 @@
 
       <!-- images -->
 
-      <picture class="planet-image">
+      <picture class="planet-image" data-image-for="moon-tab">
         <source
           srcset="../assets/destination/image-moon.webp"
           type="image/webp"
@@ -90,7 +90,7 @@
         <img src="../assets/destination/image-moon.png" alt="the moon" />
       </picture>
 
-      <picture class="planet-image">
+      <picture class="planet-image hidden" data-image-for="mars-tab">
         <source
           srcset="../assets/destination/image-mars.webp"
           type="image/webp"
@@ -98,7 +98,7 @@
         <img src="../assets/destination/image-mars.png" alt="the moon" />
       </picture>
 
-      <picture class="planet-image">
+      <picture class="planet-image hidden" data-image-for="europa-tab">
         <source
           srcset="../assets/destination/image-europa.webp"
           type="image/webp"
@@ -106,7 +106,7 @@
         <img src="../assets/destination/image-europa.png" alt="the moon" />
       </picture>
 
-      <picture class="planet-image">
+      <picture class="planet-image hidden" data-image-for="titan-tab">
         <source
           srcset="../assets/destination/image-titan.webp"
           type="image/webp"
@@ -178,7 +178,12 @@
 
       <!-- text descriptions -->
 
-      <article class="planet-info flow" id="moon-tab" tabindex="0">
+      <article
+        class="planet-info flow"
+        id="moon-tab"
+        tabindex="0"
+        role="tabpanel"
+      >
         <section class="planet-info__text">
           <h2 class="uppercase fs-800 text-white fm-serif">Moon</h2>
 
@@ -206,7 +211,12 @@
         </section>
       </article>
 
-      <!-- <article class="planet-info flow" id="mars-tab" tabindex="0">
+      <article
+        class="planet-info flow hidden"
+        id="mars-tab"
+        tabindex="0"
+        role="tabpanel"
+      >
         <section class="planet-info__text">
           <h2 class="uppercase fs-800 text-white fm-serif">Mars</h2>
 
@@ -231,9 +241,14 @@
             <p class="text-white fm-serif fs-500">9 months</p>
           </div>
         </section>
-      </article> -->
+      </article>
 
-      <!-- <article class="planet-info flow" id="europa-tab" tabindex="0">
+      <article
+        class="planet-info flow hidden"
+        id="europa-tab"
+        tabindex="0"
+        role="tabpanel"
+      >
         <section class="planet-info__text">
           <h2 class="uppercase fs-800 text-white fm-serif">Europa</h2>
 
@@ -259,9 +274,14 @@
             <p class="text-white fm-serif fs-500">3 years</p>
           </div>
         </section>
-      </article> -->
+      </article>
 
-      <!-- <article class="planet-info flow" id="titan-tab" tabindex="0">
+      <article
+        class="planet-info flow hidden"
+        id="titan-tab"
+        tabindex="0"
+        role="tabpanel"
+      >
         <section class="planet-info__text">
           <h2 class="uppercase fs-800 text-white fm-serif">Titan</h2>
 
@@ -286,7 +306,7 @@
             <p class="text-white fm-serif fs-500">7 years</p>
           </div>
         </section>
-      </article> -->
+      </article>
 
       <!-- end of text descriptions -->
     </main>
