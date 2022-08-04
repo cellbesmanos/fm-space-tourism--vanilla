@@ -23,6 +23,7 @@
     />
 
     <script src="../scripts.js" defer></script>
+    <script src="../tab-list.js" defer></script>
   </head>
 
   <body class="destination">
@@ -79,6 +80,8 @@
         <span aria-hidden="true">01</span>Pick your destination
       </h1>
 
+      <!-- images -->
+
       <picture class="planet-image">
         <source
           srcset="../assets/destination/image-moon.webp"
@@ -87,9 +90,37 @@
         <img src="../assets/destination/image-moon.png" alt="the moon" />
       </picture>
 
+      <picture class="planet-image">
+        <source
+          srcset="../assets/destination/image-mars.webp"
+          type="image/webp"
+        />
+        <img src="../assets/destination/image-mars.png" alt="the moon" />
+      </picture>
+
+      <picture class="planet-image">
+        <source
+          srcset="../assets/destination/image-europa.webp"
+          type="image/webp"
+        />
+        <img src="../assets/destination/image-europa.png" alt="the moon" />
+      </picture>
+
+      <picture class="planet-image">
+        <source
+          srcset="../assets/destination/image-titan.webp"
+          type="image/webp"
+        />
+        <img src="../assets/destination/image-titan.png" alt="the moon" />
+      </picture>
+
+      <!-- end of images -->
+
       <ul
         class="tab-list underline-indicators flex"
         style="--underline-gap: 1.2rem"
+        role="tablist"
+        aria-label="destination list"
       >
         <li class="active">
           <button
@@ -97,6 +128,9 @@
             href="#"
             role="tab"
             aria-selected="true"
+            aria-controls="moon-tab"
+            tabindex="0"
+            data-tab-index="0"
           >
             Moon
           </button>
@@ -107,6 +141,9 @@
             href="#"
             role="tab"
             aria-selected="false"
+            aria-controls="mars-tab"
+            tabindex="-1"
+            data-tab-index="1"
           >
             Mars
           </button>
@@ -117,6 +154,9 @@
             href="#"
             role="tab"
             aria-selected="false"
+            aria-controls="europa-tab"
+            tabindex="-1"
+            data-tab-index="2"
           >
             Europa
           </button>
@@ -127,13 +167,18 @@
             href="#"
             role="tab"
             aria-selected="false"
+            aria-controls="titan-tab"
+            tabindex="-1"
+            data-tab-index="3"
           >
             Titan
           </button>
         </li>
       </ul>
 
-      <article class="planet-info flow">
+      <!-- text descriptions -->
+
+      <article class="planet-info flow" id="moon-tab" tabindex="0">
         <section class="planet-info__text">
           <h2 class="uppercase fs-800 text-white fm-serif">Moon</h2>
 
@@ -160,6 +205,90 @@
           </div>
         </section>
       </article>
+
+      <!-- <article class="planet-info flow" id="mars-tab" tabindex="0">
+        <section class="planet-info__text">
+          <h2 class="uppercase fs-800 text-white fm-serif">Mars</h2>
+
+          <p>
+            Don’t forget to pack your hiking boots. You’ll need them to tackle
+            Olympus Mons, the tallest planetary mountain in our solar system.
+            It’s two and a half times the size of Everest!
+          </p>
+        </section>
+
+        <section class="planet-info__stats flex">
+          <div class="uppercase">
+            <h3 class="fs-200 letter-spacing-3 fm-sans-condensed">
+              Avg. distance
+            </h3>
+            <p class="text-white fm-serif fs-500">225 mil. km</p>
+          </div>
+          <div class="uppercase">
+            <h3 class="fs-200 letter-spacing-3 fm-sans-condensed">
+              Est. travel time
+            </h3>
+            <p class="text-white fm-serif fs-500">9 months</p>
+          </div>
+        </section>
+      </article> -->
+
+      <!-- <article class="planet-info flow" id="europa-tab" tabindex="0">
+        <section class="planet-info__text">
+          <h2 class="uppercase fs-800 text-white fm-serif">Europa</h2>
+
+          <p>
+            The smallest of the four Galilean moons orbiting Jupiter, Europa is
+            a winter lover’s dream. With an icy surface, it’s perfect for a bit
+            of ice skating, curling, hockey, or simple relaxation in your snug
+            wintery cabin.
+          </p>
+        </section>
+
+        <section class="planet-info__stats flex">
+          <div class="uppercase">
+            <h3 class="fs-200 letter-spacing-3 fm-sans-condensed">
+              Avg. distance
+            </h3>
+            <p class="text-white fm-serif fs-500">628 mil. km</p>
+          </div>
+          <div class="uppercase">
+            <h3 class="fs-200 letter-spacing-3 fm-sans-condensed">
+              Est. travel time
+            </h3>
+            <p class="text-white fm-serif fs-500">3 years</p>
+          </div>
+        </section>
+      </article> -->
+
+      <!-- <article class="planet-info flow" id="titan-tab" tabindex="0">
+        <section class="planet-info__text">
+          <h2 class="uppercase fs-800 text-white fm-serif">Titan</h2>
+
+          <p>
+            The only moon known to have a dense atmosphere other than Earth,
+            Titan is a home away from home (just a few hundred degrees colder!).
+            As a bonus, you get striking views of the Rings of Saturn.
+          </p>
+        </section>
+
+        <section class="planet-info__stats flex">
+          <div class="uppercase">
+            <h3 class="fs-200 letter-spacing-3 fm-sans-condensed">
+              Avg. distance
+            </h3>
+            <p class="text-white fm-serif fs-500">1.6 bil. km</p>
+          </div>
+          <div class="uppercase">
+            <h3 class="fs-200 letter-spacing-3 fm-sans-condensed">
+              Est. travel time
+            </h3>
+            <p class="text-white fm-serif fs-500">7 years</p>
+          </div>
+        </section>
+      </article> -->
+
+      <!-- end of text descriptions -->
     </main>
   </body>
 </html>
