@@ -4,6 +4,8 @@ const tabs = tabList.querySelectorAll("li button[role='tab']");
 
 tabs.forEach((tab) => {
   tab.addEventListener("keyup", hoverTabs);
+
+  tab.addEventListener("click", selectTab);
 });
 
 function hoverTabs(e) {
@@ -51,4 +53,28 @@ function hoverTabs(e) {
     hoveredTab.setAttribute("tabindex", "0");
     hoveredTab.focus();
   }
+}
+
+function selectTab(e) {
+  const tabIndex = parseInt(e.target.dataset.tabIndex);
+
+  items.forEach((item) => {
+    item.classList.remove("active");
+  });
+
+  tabs.forEach((tab) => {
+    tab.setAttribute("aria-selected", "false");
+  });
+
+  console.log(tabIndex);
+
+  const activeTab = tabList.querySelector(
+    `li button[role='tab'][data-tab-index='${tabIndex}']`
+  );
+  const activeItem = activeTab.parentElement;
+  const activePanel = activeTab.getAttribute("aria-controls");
+
+  activeTab.setAttribute("aria-selected", "true");
+  activeItem.classList.add("active");
+  console.log(activePanel);
 }
