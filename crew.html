@@ -23,6 +23,7 @@
     />
 
     <script src="../scripts.js" defer></script>
+    <script src="../dot-indicators.js" defer></script>
   </head>
 
   <body class="crew">
@@ -81,7 +82,9 @@
         <span aria-hidden="true">02</span>Meet your crew
       </h1>
 
-      <picture class="crew-image">
+      <!-- images -->
+
+      <picture class="crew-image" data-image-for="commander-tab">
         <source
           srcset="../assets/crew/image-douglas-hurley.webp"
           type="image/webp"
@@ -92,7 +95,49 @@
         />
       </picture>
 
-      <article class="crew-info flow">
+      <picture class="crew-image hidden" data-image-for="specialist-tab">
+        <source
+          srcset="../assets/crew/image-mark-shuttleworth.webp"
+          type="image/webp"
+        />
+        <img
+          src="../assets/crew/image-mark-shuttleworth.png"
+          alt="douglas hurley"
+        />
+      </picture>
+
+      <picture class="crew-image hidden" data-image-for="pilot-tab">
+        <source
+          srcset="../assets/crew/image-victor-glover.webp"
+          type="image/webp"
+        />
+        <img
+          src="../assets/crew/image-victor-glover.png"
+          alt="douglas hurley"
+        />
+      </picture>
+
+      <picture class="crew-image hidden" data-image-for="engineer-tab">
+        <source
+          srcset="../assets/crew/image-anousheh-ansari.webp"
+          type="image/webp"
+        />
+        <img
+          src="../assets/crew/image-anousheh-ansari.png"
+          alt="douglas hurley"
+        />
+      </picture>
+
+      <!-- end of images -->
+
+      <!-- description -->
+
+      <article
+        class="crew-info flow"
+        id="commander-tab"
+        tabindex="0"
+        role="tabpanel"
+      >
         <header class="flow">
           <h2 class="uppercase fs-600 fm-serif">Commander</h2>
           <p class="uppercase fs-700 text-white fm-serif">Douglas Hurley</p>
@@ -105,18 +150,100 @@
         </p>
       </article>
 
-      <div class="dot-indicators flex">
-        <button aria-selected="true">
-          <span class="sr-only">Slide title here</span>
+      <article
+        class="crew-info flow hidden"
+        id="specialist-tab"
+        tabindex="0"
+        role="tabpanel"
+      >
+        <header class="flow">
+          <h2 class="uppercase fs-600 fm-serif">Mission Specialist</h2>
+          <p class="uppercase fs-700 text-white fm-serif">Mark Shuttleworth</p>
+        </header>
+
+        <p>
+          Mark Richard Shuttleworth is the founder and CEO of Canonical, the
+          company behind the Linux-based Ubuntu operating system. Shuttleworth
+          became the first South African to travel to space as a space tourist.
+        </p>
+      </article>
+
+      <article
+        class="crew-info flow hidden"
+        id="pilot-tab"
+        tabindex="0"
+        role="tabpanel"
+      >
+        <header class="flow">
+          <h2 class="uppercase fs-600 fm-serif">Pilot</h2>
+          <p class="uppercase fs-700 text-white fm-serif">Victor Glover</p>
+        </header>
+
+        <p>
+          Pilot on the first operational flight of the SpaceX Crew Dragon to the
+          International Space Station. Glover is a commander in the U.S. Navy
+          where he pilots an F/A-18.He was a crew member of Expedition 64, and
+          served as a station systems flight engineer.
+        </p>
+      </article>
+
+      <article
+        class="crew-info flow hidden"
+        id="engineer-tab"
+        tabindex="0"
+        role="tabpanel"
+      >
+        <header class="flow">
+          <h2 class="uppercase fs-600 fm-serif">Flight Engineer</h2>
+          <p class="uppercase fs-700 text-white fm-serif">Anousheh Ansari</p>
+        </header>
+
+        <p>
+          Anousheh Ansari is an Iranian American engineer and co-founder of
+          Prodea Systems. Ansari was the fourth self-funded space tourist, the
+          first self-funded woman to fly to the ISS, and the first Iranian in
+          space.
+        </p>
+      </article>
+
+      <!-- end of description -->
+
+      <div class="dot-indicators flex" role="tablist">
+        <button
+          aria-selected="true"
+          aria-controls="commander-tab"
+          role="tab"
+          tabindex="0"
+          data-tab-index="0"
+        >
+          <span class="sr-only">Commander</span>
         </button>
-        <button aria-selected="false">
-          <span class="sr-only">Slide title here</span>
+        <button
+          aria-selected="false"
+          aria-controls="specialist-tab"
+          role="tab"
+          tabindex="-1"
+          data-tab-index="1"
+        >
+          <span class="sr-only">Mission Specialist</span>
         </button>
-        <button aria-selected="false">
-          <span class="sr-only">Slide title here</span>
+        <button
+          aria-selected="false"
+          aria-controls="pilot-tab"
+          role="tab"
+          tabindex="-1"
+          data-tab-index="2"
+        >
+          <span class="sr-only">Pilot</span>
         </button>
-        <button aria-selected="false">
-          <span class="sr-only">Slide title here</span>
+        <button
+          aria-selected="false"
+          aria-controls="engineer-tab"
+          role="tab"
+          tabindex="-1"
+          data-tab-index="3"
+        >
+          <span class="sr-only">Flight Engineer</span>
         </button>
       </div>
     </main>
