@@ -76,7 +76,7 @@
       </nav>
     </header>
 
-    <main id="main" class="grid-container grid-container--destination flow">
+    <main id="main" class="grid-container grid-container--technology flow">
       <h1 class="numbered-title">
         <span aria-hidden="true">03</span>Space launch 101
       </h1>
@@ -117,7 +117,7 @@
 
       <!-- images -->
 
-      <picture class="planet-image" data-image-for="launch-vehicle-tab">
+      <picture class="technology-image" data-image-for="launch-vehicle-tab">
         <source
           media="(min-width: 53.75em)"
           srcset="../assets/technology/image-launch-vehicle-portrait.jpg"
@@ -129,8 +129,9 @@
         />
       </picture>
 
-      <picture class="planet-image hidden" data-image-for="spaceport-tab">
+      <picture class="technology-image hidden" data-image-for="spaceport-tab">
         <source
+          media="(min-width: 53.75em)"
           srcset="../assets/technology/image-spaceport-portrait.jpg"
           type="image/webp"
         />
@@ -140,8 +141,12 @@
         />
       </picture>
 
-      <picture class="planet-image hidden" data-image-for="space-capsule-tab">
+      <picture
+        class="technology-image hidden"
+        data-image-for="space-capsule-tab"
+      >
         <source
+          media="(min-width: 53.75em)"
           srcset="../assets/technology/image-space-capsule-portrait.jpg"
           type="image/webp"
         />
@@ -156,7 +161,7 @@
       <!-- text descriptions -->
 
       <article
-        class="crew-info flow"
+        class="technology-info flow"
         id="launch-vehicle-tab"
         tabindex="0"
         role="tabpanel"
@@ -176,7 +181,7 @@
       </article>
 
       <article
-        class="crew-info flow hidden"
+        class="technology-info flow hidden"
         id="spaceport-tab"
         tabindex="0"
         role="tabpanel"
@@ -195,7 +200,7 @@
       </article>
 
       <article
-        class="crew-info flow hidden"
+        class="technology-info flow hidden"
         id="space-capsule-tab"
         tabindex="0"
         role="tabpanel"

@@ -519,7 +519,7 @@ p {
 }
 
 .numbered-indicators > button {
-  --size: 8rem;
+  --size: clamp(4rem, 8vw, 8rem);
 
   width: var(--size);
   height: var(--size);
@@ -711,8 +711,47 @@ p {
   grid-area: content;
 }
 
+/* technology */
+
+.grid-container--technology {
+  grid-template-columns: minmax(1.6rem, 1fr) repeat(2, minmax(0, 64rem)) minmax(
+      1.6rem,
+      1fr
+    );
+  grid-template-areas:
+    ". title title ."
+    "image image image image"
+    ". numbers numbers ."
+    ". content content .";
+  padding-inline: unset;
+}
+
+.grid-container--technology > .numbered-title {
+  grid-area: title;
+}
+
+.grid-container--technology > .numbered-indicators {
+  grid-area: numbers;
+}
+
+.grid-container--technology > .technology-info {
+  grid-area: content;
+  padding-inline: 1.6rem;
+}
+
+.grid-container--technology > .technology-image {
+  grid-area: image;
+  max-width: 100%;
+}
+
+.grid-container--technology > .technology-image > img {
+  min-height: 17rem;
+}
+
 @media (min-width: 35em) {
-  .grid-container--destination {
+  .grid-container--destination,
+  .grid-container--crew,
+  .grid-container--technology {
     padding-top: clamp(4rem, 4vh, 6rem);
   }
 
@@ -731,8 +770,6 @@ p {
   }
 
   .grid-container--crew {
-    padding-top: clamp(4rem, 4vh, 6rem);
-
     grid-template-areas:
       "title"
       "content"
@@ -749,6 +786,23 @@ p {
 
   .grid-container--crew > .crew-image {
     align-self: end;
+  }
+
+  .grid-container--technology {
+    --flow-space: 4rem;
+  }
+
+  .technology-info > * {
+    --flow-space: 1.8rem;
+  }
+
+  .grid-container--technology > .technology-image {
+    --flow-space: 0;
+  }
+
+  .grid-container--technology > .numbered-title {
+    margin-bottom: min(3vh, 6.4rem);
+    justify-self: start;
   }
 }
 
@@ -834,5 +888,35 @@ p {
   .grid-container--crew > .crew-image {
     justify-self: center;
     width: max(30rem, 100%);
+  }
+
+  .grid-container--technology {
+    grid-template-columns:
+      minmax(1.6rem, 1fr) minmax(0, 10rem) minmax(0, 80rem) minmax(0, 54rem)
+      minmax(0, 1fr);
+
+    grid-template-areas:
+      ". title title title . "
+      ". numbers content image .";
+
+    align-content: start;
+    justify-items: start;
+    text-align: left;
+  }
+
+  .grid-container--technology > article {
+    max-width: unset;
+  }
+
+  .grid-container--technology > article > p {
+    max-width: 45ch;
+  }
+
+  .grid-container--technology > .numbered-indicators {
+    flex-direction: column;
+  }
+
+  .grid-container--technology > .technology-image {
+    justify-self: end;
   }
 }
