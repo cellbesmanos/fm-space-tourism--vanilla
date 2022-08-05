@@ -807,8 +807,15 @@ p {
   }
 
   .grid-container--crew > * {
-    max-width: 48ch;
     justify-self: start;
+  }
+
+  .grid-container--crew > article {
+    max-width: unset;
+  }
+
+  .grid-container--crew > article > p {
+    max-width: 45ch;
   }
 
   .grid-container--crew > .crew-image {
